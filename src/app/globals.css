@@ -1,1 +1,29 @@
 @import "tailwindcss";
+
+body {
+    font-family: "Montserrat", sans-serif !important;
+    font-optical-sizing: auto;
+  }
+  
+  /* Add this CSS in your global.css or component module */
+.scroll {
+    max-height: 100% !important;
+    height: 100% !important;
+    overflow-y: auto !important;
+  }
+  
+  /* Chrome, Edge, Safari */
+  .scroll::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .scroll::-webkit-scrollbar-thumb {
+    background-color: #2b7fff !important;
+    border-radius: 4px;
+    border: 0px solid #f1f1f1 !important;
+  }
+  
+  .scrollbar {
+    scrollbar-width: thin !important;
+    scrollbar-color: #105f62 #f0f0f0;
+  }
