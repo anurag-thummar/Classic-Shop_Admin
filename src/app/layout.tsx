@@ -6,6 +6,7 @@ import Sidebar from "./components/Sidebar";
 import { Toaster } from "react-hot-toast";
 import { useState } from "react";
 import { TfiMenuAlt } from "react-icons/tfi";
+import Header from "./components/Header/Header";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -31,14 +32,10 @@ export default function RootLayout({
       >
         <div className="flex">
           {openSidebar && <Sidebar />}
-          <header className=" border-b border-[#e0e0e0] bg-amber-50 w-full h-[50px]">
-            <div className="px-2 flex items-center justify-between w-full h-full">
-              <div className=" p-2 hover:bg-[#e0e0e0] rounded-full transition-all duration-300 group cursor-pointer" onClick={() => setOpenSidebar(!openSidebar)}>
-                <TfiMenuAlt className="w-[20px] h-[20px] group-hover:text-blue-500 " />
-              </div>
-            </div>
+          <div className=" border-b border-[#e0e0e0] bg-white w-full h-[50px]">
+            <Header openSidebar={openSidebar} setOpenSidebar={setOpenSidebar} />
             {children}
-          </header>
+          </div>
         </div>
         <Toaster
           {...{

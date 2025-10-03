@@ -4,6 +4,12 @@ body {
     font-family: "Montserrat", sans-serif !important;
     font-optical-sizing: auto;
   }
+
+  .container {
+    @apply !max-w-[96%];
+    margin: 0 auto;
+    /* padding: 0 20px; */
+  }
   
   /* Add this CSS in your global.css or component module */
 .scroll {
@@ -27,3 +33,12 @@ body {
     scrollbar-width: thin !important;
     scrollbar-color: #105f62 #f0f0f0;
   }
+
+  .buttonUtils {
+    @apply !flex !gap-2 !text-[#fff] !bg-blue-500 !font-semibold !uppercase font-[Roboto]  hover:!bg-black !p-2 !rounded-[4px] !px-5 !py-[7px] !cursor-pointer transition-all duration-300 ease-in-out;
+  }
+
+  .text-primary {
+    @apply !text-blue-500;
+  }
+  
