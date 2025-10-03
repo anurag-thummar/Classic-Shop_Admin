@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { FaGoogle, FaEye, FaEyeSlash } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 
-const Page = () => {
+const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
@@ -20,8 +20,8 @@ const Page = () => {
         </div>
 
         <h1 className="text-center text-[18px] sm:text-[30px] font-[800] mt-4">
-          Welcome Back! <br />
-          Sign in with your credentials.
+        Join us today! Get special
+        benefits and stay up-to-date.
         </h1>
 
         <div className="flex items-center justify-center w-full mt-5 gap-4">
@@ -37,12 +37,21 @@ const Page = () => {
         <div className="w-full flex items-center justify-center gap-3 my-4">
           <span className="flex items-center w-[100px] h-[1px] bg-[rgba(0,0,0,0.2)]"></span>
           <span className="text-[10px] lg:text-[14px] font-[500]">
-            Or, Sign in with your email
+            Or, Sign Up with your email
           </span>
           <span className="flex items-center w-[100px] h-[1px] bg-[rgba(0,0,0,0.2)]"></span>
         </div>
 
         <form className="w-full px-8 mt-3">
+          <div className="form-group mb-4 w-full">
+            <h4 className="text-[14px] font-[500] mb-1">Full Name</h4>
+            <input
+              type="text"
+              className="w-full h-[40px] border-2 border-[rgba(0,0,0,0.1)] rounded-md focus:!border-blue-500 focus:outline-none px-3"
+              name="name"
+              defaultValue=""
+            />
+          </div>
           <div className="form-group mb-4 w-full">
             <h4 className="text-[14px] font-[500] mb-1">Email</h4>
             <input
@@ -96,7 +105,7 @@ const Page = () => {
             className="buttonUtils flex items-center justify-center w-full !py-3 rounded-md text-white font-semibold"
             type="submit"
           >
-            Sign In
+            Sign Up
           </button>
         </form>
       </div>
@@ -104,4 +113,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default SignUp;

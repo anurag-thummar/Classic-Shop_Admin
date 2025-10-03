@@ -1,12 +1,11 @@
 'use client'
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Montserrat, Roboto } from "next/font/google";
+import { Montserrat, Roboto } from "next/font/google";
 import "./globals.css";
-import Sidebar from "./components/Sidebar";
 import { Toaster } from "react-hot-toast";
-import { useState } from "react";
-import { TfiMenuAlt } from "react-icons/tfi";
-import Header from "./components/Header/Header";
+import { usePathname } from "next/navigation";
+import SidebarLayout from "./SidebarLayout";
+import BaseHeader from "./components/Header/BaseHeader";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -21,51 +20,47 @@ const roboto = Roboto({
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
-  const [openSidebar, setOpenSidebar] = useState(true);
+}) {
+  const pathname = usePathname();
+
+  const isAuthPage =
+    pathname?.startsWith("/login") || pathname?.startsWith("/sign-up");
+
   return (
     <html lang="en">
       <body
         className={`${montserrat.variable} ${roboto.variable} antialiased`}
       >
-        <div className="flex">
-          {openSidebar && <Sidebar />}
-          <div className=" border-b border-[#e0e0e0] bg-white w-full h-[50px]">
-            <Header openSidebar={openSidebar} setOpenSidebar={setOpenSidebar} />
-            {children}
+        {isAuthPage ? (
+          <div className="flex flex-col w-full">
+            <BaseHeader />
+            <div>{children}</div>
           </div>
-        </div>
+        ) : (
+          <SidebarLayout>{children}</SidebarLayout>
+        )}
+
         <Toaster
-          {...{
-            position: "top-right",
-            autoClose: 2000,
-            toastClassName: "custom-toast",
-            bodyClassName: "custom-toast-body",
-            hideProgressBar: true,
-            newestOnTop: true,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            toastOptions: {
-              style: {
-                color: "#000",
-                background: "blue",
-                borderRadius: "0px",
-                fontWeight: 500,
+          position="top-right"
+          toastOptions={{
+            style: {
+              color: "#000",
+              background: "blue",
+              borderRadius: "0px",
+              fontWeight: 500,
+            },
+            success: {
+              iconTheme: {
+                primary: "#43916f",
+                secondary: "#fff",
               },
-              success: {
-                iconTheme: {
-                  primary: "#43916f",
-                  secondary: "#fff",
-                },
-              },
-              error: {
-                iconTheme: {
-                  primary: "#e55642",
-                  secondary: "#fff",
-                },
+            },
+            error: {
+              iconTheme: {
+                primary: "#e55642",
+                secondary: "#fff",
               },
             },
           }}

@@ -140,7 +140,7 @@ const Sidebar = () => {
         onClick={(e) => e.stopPropagation()}
         className="h-[100vh] border-r-1 border-[#e0e0e0] bg-white"
       >
-        <div className="flex items-center p-3">
+        <div className="flex items-center p-3 w-full justify-center">
           <Link href="/" className="flex items-center gap-x-2">
             <Image
               src="/images/clasiyLogo.png"
