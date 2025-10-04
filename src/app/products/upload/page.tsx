@@ -4,11 +4,8 @@ import TableInput from "@/app/components/select/TableInput";
 import TableSelect from "@/app/components/select/TableSelect";
 import TableTextarea from "@/app/components/select/TableTextArea";
 import { ProductType } from "../../../../types/product.type";
-import { yupResolver } from "@hookform/resolvers/yup";
 import React from "react";
 import { useForm } from "react-hook-form";
-import * as yup from "yup";
-import { Rating, Typography } from "@mui/material";
 import TableRating from "@/app/components/select/TableRating";
 
 // ✅ Validation Schema
@@ -204,7 +201,7 @@ const ProductForm = () => {
                         label="Media & Images"
                         name="images"
                         register={register}
-                        error={errors?.images as any}
+                        // error={errors?.images}
                         multiple
                     />
 

@@ -1,6 +1,8 @@
 "use client";
+import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
-import { FaGoogle, FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 
 const Page = () => {
@@ -8,15 +10,17 @@ const Page = () => {
 
   return (
     <div>
-      <img
+      <Image
         src="/images/patern.webp"
         className="w-full fixed top-0 left-0 opacity-5"
         alt="background pattern"
+        width={60}
+        height={20}
       />
 
       <div className="loginBox card w-full md:w-[500px] h-auto pb-20 mx-auto pt-5 lg:pt-20 relative z-9">
         <div className="text-center">
-          <img src="https://ecommerce-admin-view.netlify.app/icon.svg" className="m-auto" alt="logo" />
+          <Image src="https://ecommerce-admin-view.netlify.app/icon.svg" width={60} height={20} className="m-auto" alt="logo" />
         </div>
 
         <h1 className="text-center text-[18px] sm:text-[30px] font-[800] mt-4">
@@ -77,19 +81,19 @@ const Page = () => {
               <input type="checkbox" className="w-[18px] h-[18px] " />
               <span className="text-[16px] font-[400] font-[Roboto]">Remember Me</span>
             </label>
-            <a className="text-primary font-[700] text-[15px] hover:underline hover:text-gray-700 cursor-pointer">
+            <Link href="/forgot-password" className="text-primary font-[700] text-[15px] hover:underline hover:text-gray-700 cursor-pointer">
               Forgot Password?
-            </a>
+            </Link>
           </div>
 
           <div className="flex items-center justify-between mb-4">
-            <span className="text-[14px]">Don't have an account?</span>
-            <a
+            <span className="text-[14px]">Don&apos;t have an account?</span>
+            <Link
               className="text-primary font-[700] text-[15px] hover:underline hover:text-gray-700 cursor-pointer"
               href="/sign-up"
             >
               Sign Up
-            </a>
+            </Link>
           </div>
 
           <button

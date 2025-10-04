@@ -9,7 +9,7 @@ const SidebarLayout = ({children}: {children: React.ReactNode}) => {
     return (
         <>
             <div className="flex ">
-                <div className="w-[20%]">
+                <div className={`${openSidebar ? "w-[20%]" : "w-[0%]"}`}>
                 {openSidebar && <Sidebar />}
                 </div>
                 <div className={` border-b border-[#e0e0e0] bg-white w-[80%] h-[50px] ${openSidebar ? "w-[80%]" : "w-[100%]"}`}>

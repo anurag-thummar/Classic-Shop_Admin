@@ -2,14 +2,12 @@
 import { Box } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import {
   AiFillPicture,
-  AiOutlinePicture
 } from "react-icons/ai";
 import {
-  BsFillGrid1X2Fill,
   BsFillPostcardFill
 } from "react-icons/bs";
 import {
@@ -20,7 +18,6 @@ import {
   FaRegSquarePlus,
   FaUsers
 } from "react-icons/fa6";
-import { HiViewGrid } from "react-icons/hi";
 import {
   IoBagCheck,
   IoGrid,
@@ -68,7 +65,7 @@ const menuData: MenuCategory[] = [
     icon: <TbCategoryFilled className="text-[22px]" />,
     subMenu: [
       { name: "Category List", url: "/category/list" },
-      { name: "Add A Category", url: "/category/add-category" },
+      { name: "Add A Category", url: "  " },
       { name: "Sub Category List", url: "/category/subcategory-list" },
       { name: "Add A Sub Category", url: "/category/add-subcategory" }
     ]
@@ -79,9 +76,9 @@ const menuData: MenuCategory[] = [
     subMenu: [
       { name: "Product List", url: "/products" },
       { name: "Product Upload", url: "/products/upload" },
-      { name: "Add Product RAMS", url: "/products/rams" },
-      { name: "Add Product WEIGHT", url: "/products/weight" },
-      { name: "Add Product SIZE", url: "/products/size" }
+      { name: "Add Product RAMS", url: "/products/add-product-ram" },
+      { name: "Add Product WEIGHT", url: "/products/add-product-weight" },
+      { name: "Add Product SIZE", url: "/products/add-product-size" }
     ]
   },
   {
@@ -98,18 +95,18 @@ const menuData: MenuCategory[] = [
     name: "Banners",
     icon: <AiFillPicture className="text-[22px]" />,
     subMenu: [
-      { name: "Home Banner List", url: "/banners" },
-      { name: "Add Home Banner", url: "/banners/add" },
-      { name: "Home Banner List 2", url: "/banners/list2" },
-      { name: "Add A Home Banner", url: "/banners/add2" }
+      { name: "Home Banner List", url: "/banners/banner-list" },
+      { name: "Add Home Banner", url: "/banners/add-banner" },
+      { name: "Home Banner List 2", url: "/banners/banner-list2" },
+      { name: "Add A Home Banner", url: "/banners/add-banner2" }
     ]
   },
   {
     name: "Blog",
     icon: <BsFillPostcardFill className="text-[22px]" />,
     subMenu: [
-      { name: "Blog List", url: "/blogs" },
-      { name: "Add Blog", url: "/blogs/add" }
+      { name: "Blog List", url: "/blog-list" },
+      { name: "Add Blog", url: "/blog-list/add-blogArticle" }
     ]
   },
   {

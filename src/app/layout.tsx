@@ -1,5 +1,4 @@
 'use client'
-import type { Metadata } from "next";
 import { Montserrat, Roboto } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
@@ -26,7 +25,7 @@ export default function RootLayout({
   const pathname = usePathname();
 
   const isAuthPage =
-    pathname?.startsWith("/login") || pathname?.startsWith("/sign-up");
+    pathname?.startsWith("/login") || pathname?.startsWith("/sign-up") || pathname?.startsWith("/forgot-password") || pathname?.startsWith("/reset-password");
 
   return (
     <html lang="en">
