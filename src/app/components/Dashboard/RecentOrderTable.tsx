@@ -52,7 +52,7 @@ const RecentOrderTable = () => {
             </button>
           </td>
           <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap">
-            Apple MacBook Pro 17"
+            Apple MacBook Pro 17
           </th>
           <td className="px-6 py-4">Silver</td>
           <td className="px-6 py-4">Laptop</td>
@@ -80,7 +80,7 @@ const RecentOrderTable = () => {
                 <tbody>
                   <tr className="bg-white border-b text-black">
                     <td className="px-6 py-4">#101</td>
-                    <td className="px-6 py-4">Apple MacBook Pro 17"</td>
+                    <td className="px-6 py-4">Apple MacBook Pro 17</td>
                     <td className="px-6 py-4">
                       <img src="/macbook.jpg" alt="MacBook" className="w-12 h-12 object-cover rounded" />
                     </td>

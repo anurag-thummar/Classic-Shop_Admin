@@ -10,17 +10,13 @@ import {
     TableRow,
     TablePagination,
     Checkbox,
-    Pagination,
-    IconButton,
     FormControl,
-    InputLabel,
     Select,
     MenuItem,
+    Link,
 } from "@mui/material";
-import { FiPieChart } from "react-icons/fi";
-import { IoStatsChartSharp } from "react-icons/io5";
-import { FaAngleDown, FaAngleUp, FaEye, FaPlus, FaTrash } from "react-icons/fa6";
-import { FaEdit, FaSearch, FaTrashAlt } from "react-icons/fa";
+import { FaEye } from "react-icons/fa6";
+import { FaSearch, FaTrashAlt } from "react-icons/fa";
 import { PiPencilSimpleLineFill } from "react-icons/pi";
 
 // Column definition
@@ -161,10 +157,12 @@ const ProductTable = () => {
     const someChecked = rows.some(r => r.checked);
     return (
         <div><div className="mx-5 bg-white mt-10 rounded-md">
-            <div className="flex items-center gap-4 py-5 px-5 w-full flex justify-between">
+            <div className="flex items-center gap-4 py-5 px-5 w-full justify-between">
                 <h3 className="text-[18px] font-[600]">Products</h3>
-                <button className="buttonUtils !capitalize !flex !items-center !gap-2 !bg-blue-500 !font-[500] !text-[14px]" type="button">
-                    Add Product</button>
+                <Link href="/products/upload">
+                    <button className="buttonUtils !capitalize !flex !items-center !gap-2 !bg-blue-500 !font-[500] !text-[14px]" type="button">
+                        Add Product</button>
+                </Link>
             </div>
             <Paper sx={{ width: "100%", overflow: "hidden" }}>
                 <div className="flex items-center gap-4 px-5 py-4">

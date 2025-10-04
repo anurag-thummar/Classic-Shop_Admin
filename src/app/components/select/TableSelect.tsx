@@ -2,7 +2,7 @@ import React from "react";
 import { UseFormRegister, FieldError } from "react-hook-form";
 
 interface TableSelectProps {
-  label: string;
+  label?: string;
   name: string;
   options: { label: string; value: string }[];
   register: UseFormRegister<any>;
@@ -25,7 +25,7 @@ const TableSelect: React.FC<TableSelectProps> = ({
         {...register(name)}
         className="w-full h-[40px] border border-[rgba(0,0,0,0.2)] 
                    focus:outline-none focus:border-[rgba(0,0,0,0.4)] 
-                   rounded-xs p-2 text-sm"
+                   rounded-xs p-2 text-sm bg-white"
       >
         <option value="">{placeholder}</option>
         {options.map((opt, i) => (

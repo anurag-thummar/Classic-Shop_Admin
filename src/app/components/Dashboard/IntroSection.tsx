@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import { FaPlus } from 'react-icons/fa6'
 import { FiPieChart } from 'react-icons/fi'
@@ -14,10 +15,13 @@ const IntroSection = () => {
                         </h1>
                         <p>Here’s What happening on your store today. See the statistics at once.</p>
                         <br />
-                        <button className="buttonUtils !capitalize !flex !items-center !gap-2 !bg-blue-500" type="button">
-                            <FaPlus className="!text-[20px] !font-normal" /> Add Product</button>
+                        <Link href="/products/upload">
+                            <button className="buttonUtils !capitalize !flex !items-center !gap-2 !bg-blue-500" type="button">
+                                <FaPlus className="!text-[20px] !font-normal" /> Add Product
+                            </button>
+                        </Link>
                     </div>
-                    <img src="https://ecommerce-admin-view.netlify.app/shop-illustration.webp" className="w-[250px] hidden lg:block" />
+                    <img src="https://ecommerce-admin-view.netlify.app/shop-illustration.webp" alt="shop-illustration" className="w-[250px] hidden lg:block" />
                 </div>
             </div>
             <div className="px-5">

@@ -1,3 +1,4 @@
+// @typescript-eslint/no-explicit-any
 import React from "react";
 import { UseFormRegister, FieldError } from "react-hook-form";
 import { FaRegImages } from "react-icons/fa6";
@@ -13,16 +14,13 @@ interface FileUploaderProps {
 const FileUploader: React.FC<FileUploaderProps> = ({
   label,
   name,
-  register,
-  error,
-  multiple = false,
 }) => {
   return (
     <div className="col w-full p-5 px-0">
       <h3 className="font-[700] text-[18px] mb-3">{label}</h3>
       <div className="grid grid-cols-2 md:grid-cols-7 gap-4">
         <div className="uploadBox p-3 rounded-md overflow-hidden border border-dashed 
-                        border-[rgba(0,0,0,0.3)] h-[150px] w-[100%] bg-gray-100 
+                        border-[rgba(0,0,0,0.3)] h-[150px] w-[180px] bg-gray-100 
                         cursor-pointer hover:bg-gray-200 flex items-center 
                         justify-center flex-col relative">
           <FaRegImages className="text-[40px] opacity-35 pointer-events-none" />

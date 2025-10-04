@@ -138,7 +138,7 @@ const initialRows = [
     createData(false, "Product 3", "https://via.placeholder.com/50", "Category 3", "SubCategory 3", 300, 30, 70, 4.7),
 ];
 
-const page = () => {
+const Products = () => {
     const [rows, setRows] = useState<Data[]>(initialRows);
     const [page, setPage] = useState(0);
     const [rowsPerPage, setRowsPerPage] = useState(5);
@@ -313,4 +313,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Products

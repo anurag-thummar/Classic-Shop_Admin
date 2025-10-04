@@ -8,9 +8,11 @@ const SidebarLayout = ({children}: {children: React.ReactNode}) => {
     const [openSidebar, setOpenSidebar] = useState(true);
     return (
         <>
-            <div className="flex w-[100%]">
+            <div className="flex ">
+                <div className="w-[20%]">
                 {openSidebar && <Sidebar />}
-                <div className=" border-b border-[#e0e0e0] bg-white w-full h-[50px]">
+                </div>
+                <div className={` border-b border-[#e0e0e0] bg-white w-[80%] h-[50px] ${openSidebar ? "w-[80%]" : "w-[100%]"}`}>
                     <Header openSidebar={openSidebar} setOpenSidebar={setOpenSidebar} />
                     <PageWrapper>
                     {children} 

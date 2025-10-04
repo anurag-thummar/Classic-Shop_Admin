@@ -26,8 +26,7 @@ function Header({ openSidebar, setOpenSidebar }: HeaderProps) {
     };
 
     return (
-        <div className="px-5 flex items-center justify-between w-full h-full bg-white">
-            {/* Sidebar toggle */}
+        <div className="px-5 flex items-center justify-between w-full h-full bg-white border-b border-[rgba(0,0,0,0.2)]">
             <div className="flex items-center gap-x-2">
                 {!openSidebar && (
                     <Link href="/" className="flex items-center gap-x-2">

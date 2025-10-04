@@ -60,17 +60,17 @@ const menuData: MenuCategory[] = [
     icon: <SlPicture className="text-[20px]" />,
     subMenu: [
       { name: "Home Banners List", url: "/home-slides" },
-      { name: "Add Home Banner Slide", url: "/home-slides/add" }
+      { name: "Add Home Banner Slide", url: "/home-slides/add-home-slides" }
     ]
   },
   {
     name: "Category",
     icon: <TbCategoryFilled className="text-[22px]" />,
     subMenu: [
-      { name: "Category List", url: "/category" },
-      { name: "Add A Category", url: "/category/add" },
-      { name: "Sub Category List", url: "/subcategory" },
-      { name: "Add A Sub Category", url: "/subcategory/add" }
+      { name: "Category List", url: "/category/list" },
+      { name: "Add A Category", url: "/category/add-category" },
+      { name: "Sub Category List", url: "/category/subcategory-list" },
+      { name: "Add A Sub Category", url: "/category/add-subcategory" }
     ]
   },
   {
@@ -114,7 +114,7 @@ const menuData: MenuCategory[] = [
   },
   {
     name: "Manage Logo",
-    url: "/logo",
+    url: "/manage-logo",
     icon: <IoLogoIonic className="text-[22px]" />
   },
   {
@@ -135,7 +135,7 @@ const Sidebar = () => {
   return (
     <div>
       <Box
-        sx={{ width: 305 }}
+        // sx={{ width: 305 }}
         role="presentation"
         onClick={(e) => e.stopPropagation()}
         className="h-[100vh] border-r-1 border-[#e0e0e0] bg-white"
